@@ -23,10 +23,10 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    if @food.save
-      redirect_to foods_path
-    else
-      render :new
+    @food.save
+    respond_to do |format|
+      format.html {redirect_to foods_path}
+      format.js
     end
   end
 

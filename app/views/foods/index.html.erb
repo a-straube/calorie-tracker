@@ -1,12 +1,12 @@
 
 
 <div class="well container col-md-5">
-  <h2 class="center"><%= @calorie_total %></h2>
+  <h2 class="center"><span id="food-calorie-counter"><%= @calorie_total %></span></h2>
   <p class="center">calories consumed</p>
 
-  <p class="center"><span class="btn btn-default"><%= link_to 'Enter Food', new_food_path %></span></p>
+  <p class="center"><span class="btn btn-default"><%= link_to "Enter Food", new_food_path, id: "good_shit", remote: true %></span></p>
 
-  <table>
+  <table id="food_table">
     <tr>
       <th>Food</th>
       <th>Calories</th>
@@ -33,7 +33,7 @@
   <table>
     <tr>
       <th>Exercise</th>
-      <th class="float-right">Calories</th>
+      <th>Calories</th>
     </tr>
     <% for exercise in @exercises %>
     <tr>
