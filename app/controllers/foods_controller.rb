@@ -24,6 +24,11 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(food_params)
     @food.save
+    @foods = Food.all
+    @calorie_total = 0
+    @foods.each do |food|
+      @calorie_total += food.calories
+    end
     respond_to do |format|
       format.html {redirect_to foods_path}
       format.js

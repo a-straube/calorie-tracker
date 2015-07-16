@@ -1,4 +1,4 @@
-<%= simple_form_for(@exercise) do |f| %>
+<%= simple_form_for @exercise, remote: true do |f| %>
   <%= f.input :exercise_type %>
   <%= f.input :calories %>
   <%= f.button :submit %>

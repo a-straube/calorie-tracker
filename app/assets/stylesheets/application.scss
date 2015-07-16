@@ -13,9 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
 .center {
   text-align: center
+}
+
+.first_column {
+  width: 85%
+}
+
+body {
+  background-image: url("http://cdn.trendhunterstatic.com/thumbs/awkward-glamour-shots.jpeg")
+}
+
+.well {
+  background: rgba(255, 255, 255, 0.59)
 }

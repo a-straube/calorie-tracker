@@ -5,10 +5,15 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.new(exercise_params)
-    if @exercise.save
-      redirect_to foods_path
-    else
-      render :new
+    @exercise.save
+    @exercises = Exercise.all
+    @calories_burned = 0
+    @exercises.each do |exercise|
+      @calories_burned += exercise.calories
+    end
+    respond_to do |format|
+      format.html {redirect_to foods_path}
+      format.js
     end
   end
 
