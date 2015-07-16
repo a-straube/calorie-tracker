@@ -27,7 +27,8 @@
 }
 
 body {
-  background-image: url("http://cdn.trendhunterstatic.com/thumbs/awkward-glamour-shots.jpeg")
+  background-image: url("http://cdn.trendhunterstatic.com/thumbs/awkward-glamour-shots.jpeg");
+  font-family: 'Arvo', serif;
 }
 
 .well {
@@ -48,4 +49,8 @@ body {
   -o-background-size: contain;
   background-size: contain;
 
+}
+
+.page-padding-top {
+  padding-top: 28px;
 }

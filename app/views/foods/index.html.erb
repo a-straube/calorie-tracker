@@ -11,12 +11,13 @@
       <th class="first_column">Food</th>
       <th>Calories</th>
     </tr>
-    <% for food in @foods %>
-    <tr>
-      <td><span class="trashcan"></span><%= food.name %></td>
-      <td><%= food.calories %></td>
-    </tr>
+
+    <!-- <%= render(@foods) %> -->
+
+    <% @foods.each do |x| %>
+      <%= render 'food', food: x %>
     <% end %>
+
   </table>
 </div>
 
@@ -35,11 +36,8 @@
       <th class="first_column">Exercise</th>
       <th>Calories</th>
     </tr>
-    <% for exercise in @exercises %>
-    <tr>
-      <td><span class="trashcan"></span><%= exercise.exercise_type %></td>
-      <td><%= exercise.calories %></td>
-    </tr>
+    <% @exercises.each do |x| %>
+      <%= render 'exercises/exercise', exercise: x %>
     <% end %>
   </table>
 </div>

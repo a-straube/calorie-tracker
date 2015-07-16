@@ -36,7 +36,17 @@ class FoodsController < ApplicationController
   end
 
   def destroy
+    @food = Food.find(params[:id])
     @food.destroy
+    @foods = Food.all
+    @calorie_total = 0
+    @foods.each do |food|
+      @calorie_total += food.calories
+    end
+    respond_to do |format|
+      format.html {redirect_to foods_path}
+      format.js 
+    end
   end
 
   private
