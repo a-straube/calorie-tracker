@@ -13,7 +13,7 @@
     </tr>
     <% for food in @foods %>
     <tr>
-      <td><%= food.name %></td>
+      <td><span class="trashcan"></span><%= food.name %></td>
       <td><%= food.calories %></td>
     </tr>
     <% end %>
@@ -37,7 +37,7 @@
     </tr>
     <% for exercise in @exercises %>
     <tr>
-      <td><%= exercise.exercise_type %></td>
+      <td><span class="trashcan"></span><%= exercise.exercise_type %></td>
       <td><%= exercise.calories %></td>
     </tr>
     <% end %>

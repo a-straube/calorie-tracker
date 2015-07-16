@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+//To remove li when .trash is clicked
+$(document).on('click', '.trashcan', function() {
+   $(this).closest('tr').remove();
+
+
+});
